@@ -1,0 +1,9 @@
+.outer {
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+}
+.menu {
+	display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+}
