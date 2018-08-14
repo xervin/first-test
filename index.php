@@ -8,10 +8,11 @@ if (empty($_SESSION['login'])) {
 }
 else {
 	include("view/menu.php");
-	if (isset($_GET['editUser'])) {
+	if (isset($_GET['editUser']) ) {
 		include("view/editor.php");
-	}
-	else {
+	} elseif (isset($_GET['createUser'])) {
+		include("view/registration.php");
+	} else {
 		include("view/users.php");	
 	}
 	

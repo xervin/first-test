@@ -40,4 +40,22 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+		$('#addUser').submit(function () {
+		var formID = $(this).attr('id');
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: "POST",
+			url: 'script/reg.php',
+			data: formNm.serialize(),
+			success: function (data) {
+			 // Вывод текста результата отправки
+			 $('#info').html(data);
+			},
+			error: function (jqXHR, text, error) {
+			 // Вывод текста ошибки отправки
+			 $('#info').html(error);
+			}
+		});
+		return false;
+	});
 });
